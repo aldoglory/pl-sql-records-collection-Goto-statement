@@ -20,28 +20,36 @@ A small agriculture database is used to simulate customers, products, and transa
 The PL/SQL programs validate data, manipulate rows, and process in-memory collections.
 
  1. Database Structure
+    
 Database Name:
 
 agriculture
 
 Tables Overview
+
  customers
+ 
 Column	Type	Description
 customer_id	INT (PK)	Unique customer ID
 cust_name	VARCHAR(50)	Customer full name
 region	VARCHAR(30)	Customer region
+
  products
+ 
 Column	Type	Description
 product_id	INT (PK)	Unique product ID
 prod_name	VARCHAR(50)	Product name
 category	VARCHAR(40)	Product category
+
  transactions
+ 
 Column	Type	Description
 transaction_id	INT (PK)	Unique transaction ID
 customer_id	INT (FK)	References customers(customer_id)
 product_id	INT (FK)	References products(product_id)
 sale_date	DATE	Transaction date
 amount	DECIMAL(10,2)	Sale amount
+
  2. Sample Data Insertions
 
 This project includes:
@@ -67,6 +75,7 @@ Jump to a labeled exit block
 Demonstrates conditional control flow.
 
  B. Records
+ 
 1. User-defined Record
 
 Defines a custom structure with:
